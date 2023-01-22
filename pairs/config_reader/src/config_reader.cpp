@@ -111,15 +111,12 @@ namespace config {
             for (auto config : this->configs) {
                 if (config.first == config_name) {
                     found_default = true;
-                    for (auto kv : config.second) {
+                    for (auto kv : config.second)
                         map[kv.first] = kv.second;
-                    }
                 }
-                if (!found_default) {
-                    for (auto kv : config.second) {
+                if (!found_default)
+                    for (auto kv : config.second)
                         map[kv.first] = kv.second;
-                    }
-                }
             }
             return map;
         }
